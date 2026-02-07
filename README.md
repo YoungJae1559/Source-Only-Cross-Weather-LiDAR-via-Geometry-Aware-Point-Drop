@@ -15,6 +15,6 @@ points and computes simple local statistics, which are compressed into compact g
 during training with negligible inference cost. We adopt a source-only cross-weather setup where models train on SemanticKITTI and are evaluated on SemanticSTF without target labels or fine-tuning. The adapter improves mIoU by +3.4% over the data-centric augmentation baseline and by +0.3% over the class-centric regularization baseline. These results indicate that geometry-driven regularization is a keydirection for all-weather LiDAR segmentation.
 
 # Methods
-![method](figs/arch.png "model arch")
+![method](figs/Figure3.png "model arch")
 
 # Getting Started
