@@ -1,0 +1,100 @@
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --btn: #0b1220;
+  --btnText: #ffffff;
+  --link: #2563eb;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: min(980px, calc(100% - 32px)); margin: 0 auto; }
+
+.hero { padding: 28px 0 8px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.brand { font-weight: 700; letter-spacing: 0.2px; }
+.more {
+  font-size: 14px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.title { font-size: clamp(28px, 4vw, 52px); line-height: 1.1; text-align: center; margin: 18px 0 10px; }
+.authors { text-align: center; margin: 0; font-size: 18px; }
+.affil { text-align: center; color: var(--muted); margin: 10px 0 0; }
+.venue { font-weight: 600; color: var(--text); }
+.note { text-align: center; color: var(--muted); margin: 10px 0 22px; font-size: 13px; }
+
+/* two-line button layout */
+.btnrows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 14px 0 22px;
+}
+
+.btnrow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background: var(--btn);
+  color: var(--btnText);
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 22px rgba(2,6,23,0.12);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  min-height: 38px;
+}
+.btn:hover { filter: brightness(1.05); text-decoration: none; }
+
+.teaser { margin: 18px auto 0; text-align: center; }
+.teaser img { width: 100%; max-width: 920px; border: 1px solid var(--border); border-radius: 14px; }
+.teaser figcaption { color: var(--muted); font-size: 13px; margin-top: 10px; }
+
+.block { padding: 28px 0; border-top: 1px solid var(--border); }
+.block h2 { text-align: center; font-size: 28px; margin: 0 0 14px; }
+.abstract { color: #334155; line-height: 1.7; font-size: 16px; margin: 0 auto; max-width: 860px; }
+
+.bibtex { position: relative; border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: #f8fafc; }
+.bibtex pre { margin: 0; overflow: auto; font-size: 13px; line-height: 1.5; }
+.copy {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid var(--border);
+  background: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+.copy:hover { filter: brightness(0.98); }
+
+.footer { padding: 24px 0 40px; color: var(--muted); text-align: center; font-size: 13px; }
