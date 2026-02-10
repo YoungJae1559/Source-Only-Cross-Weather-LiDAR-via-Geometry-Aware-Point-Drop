@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop</title>
+
+  <meta name="description" content="Project page for Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop (ICRA 2026)." />
+  <meta property="og:title" content="Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop" />
+  <meta property="og:description" content="ICRA 2026. Source-only cross-weather LiDAR semantic segmentation via geometry-aware point drop." />
+  <meta property="og:image" content="static/images/Figure3.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="static/images/favicon.ico" />
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+  <header class="container hero">
+    <div class="topbar">
+      <div class="brand">Project Page</div>
+      <a class="more" href="#related-works">Related Works</a>
+    </div>
+
+    <h1 class="title">Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop</h1>
+
+    <p class="authors">
+      <strong>YoungJae Cheong</strong> ·
+      <strong>Jhonhyun An</strong>
+    </p>
+
+    <p class="affil">
+      VIPLab, Gachon University<br/>
+      <span class="venue">ICRA 2026</span>
+    </p>
+
+    <div class="btnrows">
+      <div class="btnrow">
+        <a class="btn" href="static/files/2026%20ICRA%20paper.pdf" target="_blank" rel="noopener">📄 Paper</a>
+        <a class="btn" href="https://github.com/VIPLabGachon/Source-Only-Cross-Weather-LiDAR-via-Geometry-Aware-Point-Drop" target="_blank" rel="noopener">💻 Source Code</a>
+        <a class="btn" href="https://arxiv.org/abs/2511.01250" target="_blank" rel="noopener">🧾 arXiv</a>
+      </div>
+
+      <div class="btnrow">
+        <a class="btn" href="https://github.com/PRBonn/semantic-kitti-api" target="_blank" rel="noopener">🗂️ SemanticKITTI</a>
+        <a class="btn" href="https://github.com/xiaoaoran/SynLiDAR" target="_blank" rel="noopener">🗂️ SynLiDAR</a>
+        <a class="btn" href="https://github.com/xiaoaoran/SemanticSTF" target="_blank" rel="noopener">🗂️ SemanticSTF</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="block" id="news">
+      <h2>🔥 News</h2>
+      <ul>
+        <li><strong>[2026/02/01]</strong>: 🎉 Our paper has been accepted to the IEEE International Conference on Robotics and Automation (ICRA).</li>
+        <li><strong>Code and pretrained models will be released soon.</strong> (This repository will be updated.)</li>
+      </ul>
+    </section>
+
+    <section class="block" id="abstract">
+      <h2>Abstract</h2>
+      <p class="abstract">
+        LiDAR semantic segmentation degrades in adverse weather because refraction, scattering, and point dropouts corrupt geometry.
+        Prior work, including weather simulation, mixing-based augmentation, domain randomization, and uncertainty or boundary
+        regularization, improves robustness but still overlooks structural vulnerabilities near boundaries, corners, and sparse regions.
+        We present a Light Geometry-aware adapter. The module aligns azimuth and applies horizontal circular padding to preserve neighbor
+        continuity across the 0◦-360◦ wrap-around boundary. A local-window K-Nearest Neighbors gathers nearby points and computes simple
+        local statistics, which are compressed into compact geometry-aware cues. During training, these cues drive region-aware
+        regularization that stabilizes predictions in structurally fragile areas. The adapter is plug-and-play, complements augmentation,
+        and can be enabled only during training with negligible inference cost. We adopt a source-only cross-weather setup where models
+        train on SemanticKITTI and are evaluated on SemanticSTF without target labels or fine-tuning. The adapter improves mIoU by +3.4%
+        over the data-centric augmentation baseline and by +0.3% over the class-centric regularization baseline. These results indicate
+        that geometry-driven regularization is a key direction for all-weather LiDAR segmentation.
+      </p>
+    </section>
+
+    <section class="block" id="methods">
+      <h2>Methods</h2>
+
+      <figure class="teaser">
+        <img src="static/images/Figure3.png" alt="Main architecture" />
+        <figcaption>
+          Main architecture.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="getting-started">
+      <h2>Getting Started</h2>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" disabled />
+            Training &amp; evaluation code for <strong>SemanticKITTI to SemanticSTF</strong>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" disabled />
+            Training &amp; evaluation code for <strong>SynLiDAR to SemanticSTF</strong>
+          </label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>YoungJae Cheong</strong>: <a href="mailto:bluebull777@gachon.ac.kr">bluebull777@gachon.ac.kr</a></li>
+        <li><strong>Jhonhyun An</strong>: <a href="mailto:jhonghyun@gachon.ac.kr">jhonghyun@gachon.ac.kr</a></li>
+      </ul>
+      <p>
+        If you have questions, please open an issue or contact us via email.
+      </p>
+    </section>
+
+    <section class="block" id="related-works">
+      <h2>Related Works</h2>
+      <p>
+        We are deeply grateful for the following outstanding opensource work; without them, our work would not have been possible.
+      </p>
+      <ul>
+        <li><a href="https://github.com/engineerJPark/LiDARWeather/tree/main" target="_blank" rel="noopener">LiDARWeather</a></li>
+        <li><a href="https://github.com/engineerJPark/NTN" target="_blank" rel="noopener">No thing, Nothing</a></li>
+      </ul>
+    </section>
+
+    <section class="block" id="bibtex">
+      <h2>BibTeX</h2>
+      <div class="bibtex">
+        <pre id="bibtexText">@article{cheong2025source,
+  title={Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop},
+  author={Cheong, YoungJae and An, Jhonghyun},
+  journal={arXiv preprint arXiv:2511.01250},
+  year={2025}
+}</pre>
+        <button class="copy" id="copyBib">Copy</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Project page for ICRA 2026.
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    const btn = document.getElementById("copyBib");
+    const pre = document.getElementById("bibtexText");
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(pre.textContent);
+        btn.textContent = "Copied";
+        setTimeout(() => btn.textContent = "Copy", 1200);
+      } catch (e) {
+        btn.textContent = "Failed";
+        setTimeout(() => btn.textContent = "Copy", 1200);
+      }
+    });
+  </script>
+</body>
+</html>
