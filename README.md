@@ -37,6 +37,8 @@ during training with negligible inference cost. We adopt a source-only cross-wea
 ---
 
 ## Getting Started
+- [ ] Training & evaluation code for **SemanticKITTI to SemanticSTF**
+- [ ] Training & evaluation code for **SynLiDAR to SemanticSTF**
 
 ---
 
