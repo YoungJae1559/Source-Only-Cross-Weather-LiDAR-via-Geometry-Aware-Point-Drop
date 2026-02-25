@@ -32,7 +32,12 @@ a:hover { text-decoration: underline; }
   border-radius: 999px;
 }
 
-.title { font-size: clamp(28px, 4vw, 52px); line-height: 1.1; text-align: center; margin: 18px 0 10px; }
+.title {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.1;
+  text-align: center;
+  margin: 18px 0 10px;
+}
 .authors { text-align: center; margin: 0; font-size: 18px; }
 .affil { text-align: center; color: var(--muted); margin: 10px 0 0; }
 .venue { font-weight: 600; color: var(--text); }
@@ -81,7 +86,57 @@ a:hover { text-decoration: underline; }
 .block h2 { text-align: center; font-size: 28px; margin: 0 0 14px; }
 .abstract { color: #334155; line-height: 1.7; font-size: 16px; margin: 0 auto; max-width: 860px; }
 
-.bibtex { position: relative; border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: #f8fafc; }
+/* Video section: centered, wide, responsive (supports both iframe and local mp4 video) */
+.videoWrap {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.videoFrame {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 22px rgba(2,6,23,0.10);
+}
+
+/* 16:9 aspect ratio */
+.videoFrame::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.videoFrame iframe,
+.videoFrame .videoPlayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #000;
+}
+
+.videoCaption {
+  margin: 10px auto 0;
+  max-width: 920px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bibtex {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: #f8fafc;
+}
 .bibtex pre { margin: 0; overflow: auto; font-size: 13px; line-height: 1.5; }
 .copy {
   position: absolute;
