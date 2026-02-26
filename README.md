@@ -55,7 +55,7 @@ pip install wandb
 ---
 
 ## Data Preparation
-Please refer to [DATA_PREPARE.md](docs/DATA_PREPARE.md) for the details to prepare the 1SemanticKITTI, 2SynLiDAR, 3SemanticSTF, and 4SemanticKITTI-C datasets.
+Please refer to [DATA_PREPARE.md](docs/DATA_PREPARE.md) for the details to prepare the <sup>1</sup>[SemanticKITTI](http://www.semantic-kitti.org/), <sup>2</sup>[SynLiDAR](https://github.com/xiaoaoran/SynLiDAR), <sup>3</sup>[SemanticSTF](https://github.com/xiaoaoran/SemanticSTF), and <sup>4</sup>[SemanticKITTI-C](https://github.com/ldkong1205/Robo3D) datasets.
 
 ---
 
