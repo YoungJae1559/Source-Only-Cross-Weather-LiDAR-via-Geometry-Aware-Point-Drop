@@ -54,6 +54,7 @@ during training with negligible inference cost. We adopt a source-only cross-wea
 ---
 
 ## Installation
+```bash
 conda create -n lidar_weather python=3.8 -y && conda activate lidar_weather
 conda install pytorch==1.10.0 torchvision==0.11.0 cudatoolkit=11.3 -c pytorch -y
 pip install -U openmim && mim install mmengine && mim install 'mmcv>=2.0.0rc4, <2.1.0' && mim install 'mmdet>=3.0.0, <3.2.0'
