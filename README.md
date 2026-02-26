@@ -67,6 +67,7 @@ Please refer to [DATA_PREPARE.md](docs/DATA_PREPARE.md) for the details to prepa
 **Training**
 ```bash
 ./tools/dist_train.sh configs/lidarweather_minkunet/sj+lpd+minkunet_semantickitti_GMX.py 2
+```
 
 **Evaluation**
 ```bash
@@ -79,6 +80,7 @@ python tools/test.py configs/lidarweather_minkunet/sj+lpd+minkunet_semanticstf_G
 **Training**
 ```bash
 ./tools/dist_train.sh configs/lidarweather_minkunet/sj+lpd+minkunet_semantickitti_GMX.py 2
+```
 
 **Evaluation**
 ```bash
